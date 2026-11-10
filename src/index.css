@@ -1,0 +1,97 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Oswald', 'Plus Jakarta Sans', sans-serif;
+  --app-font-scale: 1;
+}
+
+html {
+  font-family: var(--font-sans);
+  font-size: calc(16px * var(--app-font-scale));
+  scroll-behavior: smooth;
+}
+
+/* Font Scaling presets */
+html.font-scale-sm {
+  --app-font-scale: 0.9;
+}
+html.font-scale-md {
+  --app-font-scale: 1;
+}
+html.font-scale-lg {
+  --app-font-scale: 1.15;
+}
+html.font-scale-xl {
+  --app-font-scale: 1.3;
+}
+
+/* Alto Contraste (Acessibilidade Universal PCD e Baixa Visão) */
+html.high-contrast {
+  color-scheme: dark;
+}
+
+html.high-contrast body {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+html.high-contrast .bg-white,
+html.high-contrast .bg-slate-50,
+html.high-contrast .bg-slate-100,
+html.high-contrast .bg-slate-900,
+html.high-contrast .bg-slate-950 {
+  background-color: #000000 !important;
+  border-color: #ffe500 !important;
+  color: #ffffff !important;
+}
+
+html.high-contrast .text-slate-900,
+html.high-contrast .text-slate-800,
+html.high-contrast .text-slate-700,
+html.high-contrast .text-slate-600,
+html.high-contrast .text-slate-500 {
+  color: #ffffff !important;
+}
+
+html.high-contrast .text-red-600,
+html.high-contrast .text-blue-600,
+html.high-contrast .text-emerald-600 {
+  color: #ffe500 !important;
+}
+
+html.high-contrast a,
+html.high-contrast button {
+  outline-color: #ffe500 !important;
+}
+
+html.high-contrast button.btn-primary {
+  background-color: #ffe500 !important;
+  color: #000000 !important;
+  font-weight: 700 !important;
+  border: 2px solid #ffffff !important;
+}
+
+html.high-contrast .border,
+html.high-contrast .border-slate-200,
+html.high-contrast .border-slate-300,
+html.high-contrast .border-slate-800 {
+  border-color: #ffe500 !important;
+  border-width: 2px !important;
+}
+
+/* Focus styles for keyboard / TalkBack accessibility */
+:focus-visible {
+  outline: 3px solid #ef4444;
+  outline-offset: 2px;
+}
+
+/* Hide scrollbar on touch carousels while keeping scrollable */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

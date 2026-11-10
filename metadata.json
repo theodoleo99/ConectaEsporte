@@ -1,0 +1,6 @@
+{
+  "name": "ConectaEsporte",
+  "description": "Aplicativo inclusivo e acessível para conectar a população a projetos esportivos públicos no Brasil com dados abertos (Gov.br), acessibilidade PCD e conformidade com LGPD e proteção a menores.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
